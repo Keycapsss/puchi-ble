@@ -66,6 +66,10 @@ P0.00, P0.01, P0.26, P0.27, P0.04, P0.05, P0.06, P0.07, P0.08, P1.08, P1.09, P0.
 
 Detailed pin information can be found on the [Nordic Infocenter](https://infocenter.nordicsemi.com/topic/ps_nrf52840/pin.html?cp=4_0_0_6_0_1#qfn48).
 
+## Schematic
+
+![Puchi-BLE schematic](./img/puchi-ble-schematic.png)
+
 ## FAQ
 
 - Do i need a TRRS cable to connect the split keyboard halfs?
