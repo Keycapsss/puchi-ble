@@ -10,7 +10,7 @@
 - Bootloader
   - [ ] Which and what changes
   - [ ] How to enter bootloader mode
-- [ ] Pinout
+- [x] Pinout
 - [ ] How to compile/use [ZMK](https://zmk.dev/)
 - [ ] Create a ZMK Puchi-BLE board
 - [ ] How to compile/use QMK [nrf52 fork](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52)
@@ -25,6 +25,46 @@
 - Connect the battery to B+ (red) and B- (black ), or RAW (red) and GND (black) (these pairs of pins are internally connected)
 - __Avoid reverse polarity__ (nRF52840 chip is usually destroyed first)
 - __Note that a few keyboards have RAW and VCC pins connected together (namely Helix and Gherkin), and will kill the controller__ (RAW pin is for the charger only). You may just not solder RAW pin to the keyboard as a workaround.
+
+> I don't offer LiPo batteries in the shop, because of the German strict law.
+
+## Pinout
+
+![Puchi-BLE pinout diagram](./img/puchi-ble-pinout.png)
+
+### Controller pinout comparison
+
+| Puchi-BLE | nRFMicro 1.3+ | nice!nano | ProMicro | Left  | Right | ProMicro | nice!nano | nRFMicro 1.3+ | Puchi-BLE |
+|:---------:|:-------------:|:---------:|:--------:|:-----:|:-----:|:--------:|:---------:|:-------------:|:---------:|
+| P0.06     | P0.06         | P0.06     | D3       | PIN1  | PIN24 | RAW      | RAW       | RAW           | RAW       |
+| P0.08     | P0.08         | P0.08     | D2       | PIN2  | PIN23 | GND      | GND       | GND           | GND       |
+| GND       | GND           | GND       | GND      | PIN3  | PIN22 | RST      | P0.18     | P0.18         | P0.18     |
+| GND       | GND           | GND       | GND      | PIN4  | PIN21 | VCC      | VCC       | VCC           | VCC       |
+| P0.15     | P0.15         | P0.17     | D1       | PIN5  | PIN20 | F4       | P0.31     | P0.30         | P0.30     |
+| P0.17     | P0.17         | P0.20     | D0       | PIN6  | PIN19 | F5       | P0.29     | P0.31         | P0.31     |
+| P0.20     | P0.20         | P0.22     | D4       | PIN7  | PIN18 | F6       | P0.02     | P0.29         | P0.29     |
+| P0.13     | P0.13         | P0.24     | C6       | PIN8  | PIN17 | F7       | P1.15     | P0.02         | P0.02     |
+| P0.24     | P0.24         | P1.00     | D7       | PIN9  | PIN16 | B1       | P1.13     | P1.13         | P1.13     |
+| P0.09     | P0.09         | P0.11     | E6       | PIN10 | PIN15 | B3       | P1.11     | P0.03         | P0.03     |
+| P0.10     | P0.10         | P1.04     | B4       | PIN11 | PIN14 | B2       | P0.10     | P0.28         | P0.28     |
+| P1.06     | P1.06         | P1.06     | B5       | PIN12 | PIN13 | B6       | P0.09     | P1.11         | P1.11     |
+
+### Service Pins
+
+- P0.18 - RESET
+- P1.10 - BLUE_LED (P0.15 on nice!nano)
+- P1.09 - POWER_PIN (EXT_VCC control, P0.13 on nice!nano) (1-off, 0-on)
+- P0.04 - BATTERY_PIN (analog battery voltage in mV, 820kΩ/2MΩ)
+
+### Low drive (low frequency) pins
+
+P0.31, P0.29, P0.02, P1.15, P1.13, P1.10, P0.30, P0.28, P0.03, P1.14, P1.12, P1.11, P0.10, P0.09, P1.07, P1.06, P1.05, P1.04, P1.03, P1.02, P1.01
+
+### Normal (high frequency) pins
+
+P0.00, P0.01, P0.26, P0.27, P0.04, P0.05, P0.06, P0.07, P0.08, P1.08, P1.09, P0.11, P0.12, P0.14, P0.16, P0.18, P0.19, P0.21, P0.23, P0.25, P0.13, P0.15, P0.17, P0.20, P0.22, P0.24, P1.00
+
+Detailed pin information can be found on the [Nordic Infocenter](https://infocenter.nordicsemi.com/topic/ps_nrf52840/pin.html?cp=4_0_0_6_0_1#qfn48).
 
 ## FAQ
 
