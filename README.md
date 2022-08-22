@@ -6,7 +6,9 @@
 
 ## ToDo
 
-- [ ] Status Led‘s (what they indicate)
+**Please help to improve this guide. Edit the page [here](https://github.com/Keycapsss/puchi-ble/edit/main/README.md).**
+
+- [ ] Status Led‘s (blue solid state)
 - Bootloader
   - [x] Which and what changes
   - [x] How to enter bootloader mode
