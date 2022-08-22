@@ -41,6 +41,24 @@ The Bootloader binary already contain the Bluetooth stack (a.k.a SoftDevice).
 Press RESET (short RST with GND) twice within 500ms.  
 The blue led will start slowly dimming and a Mass Storage (NRF52BOOT) should appear in your file explorer.
 
+## Status Led's
+
+- Red solid: power connected
+- Blue slow flashing (every 3sec): waiting for bluetooth connection
+- Blue off: connected via bluetooth
+- Blue slow dimming: USB Mass Storage mode, for firmware update
+- Blue solid:
+
+## Firmware
+
+### ZMK
+
+[Detailed documentation](https://github.com/joric/nrfmicro/wiki/ZMK) by Joric
+
+### QMK (nrf52 branch)
+
+[Detailed documentation](https://github.com/joric/nrfmicro/wiki/QMK) by Joric
+
 ## Pinout
 
 ![Puchi-BLE pinout diagram](./img/puchi-ble-pinout.png)
