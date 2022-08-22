@@ -8,8 +8,8 @@
 
 - [ ] Status Led‘s (what they indicate)
 - Bootloader
-  - [ ] Which and what changes
-  - [ ] How to enter bootloader mode
+  - [x] Which and what changes
+  - [x] How to enter bootloader mode
 - [x] Pinout
 - [ ] How to compile/use [ZMK](https://zmk.dev/)
 - [ ] Create a ZMK Puchi-BLE board
@@ -27,6 +27,19 @@
 - __Note that a few keyboards have RAW and VCC pins connected together (namely Helix and Gherkin), and will kill the controller__ (RAW pin is for the charger only). You may just not solder RAW pin to the keyboard as a workaround.
 
 > I don't offer LiPo batteries in the shop, because of the German strict law.
+
+## Bootloader
+
+A customized [Adafruit nRF52 Bootloader](https://github.com/adafruit/Adafruit_nRF52_Bootloader/releases) is flashed on the Puchi-BLE.
+
+[Here](https://gist.github.com/joric/7226eda8d5fdba44bc64d4520825a11d) you can find the changes from the original Adafruit nRF52 Bootloader.
+
+The Bootloader binary already contain the Bluetooth stack (a.k.a SoftDevice).
+
+### How to enter the bootloader mode
+
+Press RESET (short RST with GND) twice within 500ms.  
+The blue led will start slowly dimming and a Mass Storage (NRF52BOOT) should appear in your file explorer.
 
 ## Pinout
 
