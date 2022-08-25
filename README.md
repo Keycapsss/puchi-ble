@@ -13,11 +13,10 @@ __Please help to improve this guide. Edit the page [here](https://github.com/Key
   - [x] Which and what changes
   - [x] How to enter bootloader mode
 - [x] Pinout
-- [ ] How to compile/use [ZMK](https://zmk.dev/)
-- [ ] Create a ZMK Puchi-BLE board
 - [x] How to compile/use [ZMK](https://zmk.dev/)
+- [x] Create a ZMK Puchi-BLE board
 - [ ] How to compile/use QMK [nrf52 fork](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52)
-- [ ] How to flash a firmware
+- [x] How to flash a firmware
 - [x] What batteries are supported
 
 ## Battery (read carefully)
