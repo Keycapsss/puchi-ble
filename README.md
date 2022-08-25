@@ -15,6 +15,7 @@ __Please help to improve this guide. Edit the page [here](https://github.com/Key
 - [x] Pinout
 - [ ] How to compile/use [ZMK](https://zmk.dev/)
 - [ ] Create a ZMK Puchi-BLE board
+- [x] How to compile/use [ZMK](https://zmk.dev/)
 - [ ] How to compile/use QMK [nrf52 fork](https://github.com/sekigon-gonnoc/qmk_firmware/tree/nrf52)
 - [ ] How to flash a firmware
 - [x] What batteries are supported
@@ -43,6 +44,8 @@ The Bootloader binary already contain the Bluetooth stack (a.k.a SoftDevice).
 Press RESET (short RST with GND) twice within 500ms.  
 The blue led will start slowly dimming and a Mass Storage (NRF52BOOT) should appear in your file explorer.
 
+Now you can copy the ZMK UF2 firmware file on it.
+
 ## Status Led's
 
 - Red solid: power connected
@@ -56,6 +59,26 @@ The blue led will start slowly dimming and a Mass Storage (NRF52BOOT) should app
 ### ZMK
 
 [Detailed documentation](https://github.com/joric/nrfmicro/wiki/ZMK) by Joric
+
+[Setup local ZMK environment](https://zmk.dev/docs/development/) (with VS Code & Docker is the easiest), or use the [Github action method](https://zmk.dev/docs/user-setup).
+
+Build UF2 firmware file for Corne left side ...
+
+```bash
+west build -p -d build/left -b puchi_ble_v1 -- -DSHIELD=corne_left
+```
+
+After a successful build, you can find the UF2 firmware file in the `app/build/left/zephyr/zmk.uf2` folder.
+
+... and right side.
+
+```bash
+west build -p -d build/right -b puchi_ble_v1 -- -DSHIELD=corne_right
+```
+
+More information about 'Building For Split Keyboards' [here](https://zmk.dev/docs/development/build-flash#building-for-split-keyboards).
+
+[Here](./firmware/) you can find the precompiled firmware files (UF2) for the Corne and Lily58 keyboard.
 
 ### QMK (nrf52 branch)
 
