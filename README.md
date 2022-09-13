@@ -46,10 +46,12 @@ Now you can copy the ZMK UF2 firmware file on it.
 ## Status Led's
 
 - Red solid: power connected
-- Blue slow flashing (every 3sec): waiting for bluetooth connection
-- Blue off: connected via bluetooth
+- Blue 2x blinking: restart
+- Blue slow flashing (every 3sec): ~~waiting for bluetooth connection~~
+- Blue fast flashing:
+- Blue off: ~~connected via bluetooth~~
 - Blue slow dimming: USB Mass Storage mode, for firmware update
-- Blue solid:
+- Blue solid: ?
 
 ## Firmware
 
