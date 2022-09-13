@@ -58,8 +58,6 @@ After copying the UF2 file to the Mass Storage, the Puchi-BLE will automatically
 
 ### ZMK
 
-[Detailed documentation](https://github.com/joric/nrfmicro/wiki/ZMK) by Joric
-
 [Setup local ZMK environment](https://zmk.dev/docs/development/) (with VS Code & Docker is the easiest), or use the [Github action method](https://zmk.dev/docs/user-setup).
 
 Build UF2 firmware file for Corne left side ...
