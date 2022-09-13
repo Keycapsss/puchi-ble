@@ -42,6 +42,7 @@ Press RESET (short RST with GND) twice within 500ms.
 The blue led will start slowly dimming and a Mass Storage (NRF52BOOT) should appear in your file explorer.
 
 Now you can copy the ZMK UF2 firmware file on it.
+After copying the UF2 file to the Mass Storage, the Puchi-BLE will automatically reboot and load the new firmware.
 
 ## Status Led's
 
