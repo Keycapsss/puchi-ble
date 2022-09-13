@@ -78,7 +78,7 @@ west build -p -d build/right -b puchi_ble_v1 -- -DSHIELD=corne_right
 
 More information about 'Building For Split Keyboards' [here](https://zmk.dev/docs/development/build-flash#building-for-split-keyboards).
 
-[Here](./firmware/) you can find the precompiled firmware files (UF2) for the Corne and Lily58 keyboard.
+[Here](https://github.com/Keycapsss/puchi-ble/tree/main/firmware) you can find the precompiled firmware files (UF2) for the Corne and Lily58 keyboard.
 
 ### QMK (nrf52 branch)
 
